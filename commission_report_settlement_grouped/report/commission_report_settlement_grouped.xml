@@ -17,7 +17,7 @@
 
     <template id="report_settlement_grouped_document">
         <t t-set="o" t-value="o.with_context(lang=o.agent_id.lang)" />
-        <t t-call="commission_report_settlement_grouped.settlement_report_external_layout">
+        <t t-call="web.external_layout">
             <div class="mt-5">
                 <div class="page" style="font-size: 12px;">
                     <h2 style="font-size: 1.6rem;">Settlement</h2>
