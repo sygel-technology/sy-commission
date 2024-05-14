@@ -58,7 +58,7 @@
                                     <span t-esc="inv.amount_total_signed" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                                 </td>
                                 <td class="text-end">
-                                    <span t-esc="inv.commission_total" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                    <span t-esc="inv._get_commission_total_by_salesman(o.agent_id)" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
                                 </td>
                             </tr>
                             <t t-if="not invoice_ids">
