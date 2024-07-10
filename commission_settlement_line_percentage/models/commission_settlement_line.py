@@ -10,7 +10,7 @@ class CommissionSettlementLine(models.Model):
     percentage = fields.Float(
         name="Percentage",
         compute="_compute_percentage",
-        digits=(3,1),
+        digits=(3, 1),
         store=True,
     )
 
