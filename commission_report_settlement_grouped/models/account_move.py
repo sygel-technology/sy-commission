@@ -11,7 +11,7 @@ class AccountMove(models.Model):
     def _get_commission_total_by_salesman(self, salesman):
         self.ensure_one()
         return sum(
-            self.line_ids.agent_ids.filtered(
-                lambda al: al.agent_id == salesman
-            ).mapped("amount")
+            self.line_ids.agent_ids.filtered(lambda al: al.agent_id == salesman).mapped(
+                "amount"
+            )
         )
